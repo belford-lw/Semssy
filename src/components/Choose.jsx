@@ -1,8 +1,16 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function WhyChooseUs() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="bg-[#0b0f1a] text-white py-16 md:py-20 px-4 md:px-20">
       
-      <div className="text-center mb-12 md:mb-16">
+      <div className="text-center mb-12 md:mb-16" data-aos="fade-down">
         <h2 className="text-3xl md:text-5xl font-light leading-snug">
           Why We're the <br />
           <span className="italic font-serif">Right Partner</span> for You!
@@ -11,7 +19,7 @@ export default function WhyChooseUs() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
 
-        <div className="flex justify-center">
+        <div className="flex justify-center" data-aos="zoom-in">
           <img
             src="https://cdn.prod.website-files.com/68e062a50b7b84e9f4ada855/68eddcd90bd7d85155e13b5f_Why%20Chose%20Img%2001.avif"
             alt="Why Choose Us"
@@ -19,7 +27,10 @@ export default function WhyChooseUs() {
           />
         </div>
 
-        <div className="md:col-span-2 border border-gray-700 p-6 md:p-8 rounded-xl">
+        <div
+          className="md:col-span-2 border border-gray-700 p-6 md:p-8 rounded-xl"
+          data-aos="fade-left"
+        >
           <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
             Creative Approach
           </h3>
